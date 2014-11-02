@@ -1,0 +1,49 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Android log
+scopeName: source.log
+fileTypes: [log]
+uuid: 624215ee-ffd7-4cce-af50-e4e4dc43d58b
+
+patterns:
+- comment: Verbose
+  name: comment
+  match: '(^V.*\(.*\):)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+- comment: Debug
+  name: constant.numeric
+  match: '(^D.*\(.*\):)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+- comment: Informations
+  name: entity
+  match: '(^I.*\(.*\):)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+- comment: Warnings
+  name: string
+  match: '(^W.*\(.*\):)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+- comment: Errors
+  name: keyword
+  match: '(^E.*\(.*\):)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+- comment: Asserts
+  name: invalid
+  match: '(^A.*\(.*\):)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+...

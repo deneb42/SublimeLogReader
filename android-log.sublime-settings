@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		"log",
+	],
+
+	"color_scheme": "Packages/User/log.tmTheme",
+}
