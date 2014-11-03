@@ -4,5 +4,5 @@
 		"log",
 	],
 
-	"color_scheme": "Packages/User/log.tmTheme",
+	"color_scheme": "Packages/LogReader/log.tmTheme",
 }
