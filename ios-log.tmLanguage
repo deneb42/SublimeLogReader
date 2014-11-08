@@ -4,10 +4,10 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>alog</string>
+		<string>ilog</string>
 	</array>
 	<key>name</key>
-	<string>Android log</string>
+	<string>iOS log</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -27,7 +27,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>(^V.*\(.*\):)(.*$)</string>
+			<string>(^.*&lt;&gt;:)(.*$)</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -46,30 +46,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Debug</string>
+			<string>Notice</string>
 			<key>match</key>
-			<string>(^D.*\(.*\):)(.*$)</string>
-			<key>name</key>
-			<string>constant.numeric</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>markup.italic</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>markup.bold</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Informations</string>
-			<key>match</key>
-			<string>(^I.*\(.*\):)(.*$)</string>
+			<string>(^.*&lt;Notice&gt;:)(.*$)</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -90,7 +69,7 @@
 			<key>comment</key>
 			<string>Warnings</string>
 			<key>match</key>
-			<string>(^W.*\(.*\):)(.*$)</string>
+			<string>(^.*&lt;Warning&gt;:)(.*$)</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -111,35 +90,14 @@
 			<key>comment</key>
 			<string>Errors</string>
 			<key>match</key>
-			<string>(^E.*\(.*\):)(.*$)</string>
+			<string>(^.*&lt;Error&gt;:)(.*$)</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>markup.italic</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>markup.bold</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Asserts</string>
-			<key>match</key>
-			<string>(^A.*\(.*\):)(.*$)</string>
-			<key>name</key>
-			<string>invalid</string>
-		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.alog</string>
+	<string>source.ilog</string>
 	<key>uuid</key>
-	<string>624215ee-ffd7-4cce-af50-e4e4dc43d58b</string>
+	<string>626215ee-ffd7-4cce-af50-e4e4dc43d58b</string>
 </dict>
 </plist>
