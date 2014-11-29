@@ -29,7 +29,7 @@ settings:
   scope: 'constant'
   settings:
     fontStyle: ''
-    foreground: '#2222dd'
+    foreground: '#2299ff'
     background: ''
 
 - name: Default Entity

@@ -60,9 +60,9 @@
 				<key>background</key>
 				<string></string>
 				<key>fontStyle</key>
-				<string></string>
+				<string>bold</string>
 				<key>foreground</key>
-				<string>#2222dd</string>
+				<string>#2299ff</string>
 			</dict>
 		</dict>
 		<dict>
