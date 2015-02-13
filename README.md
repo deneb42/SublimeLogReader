@@ -1,7 +1,7 @@
 
 # SublimeLogReader
 
-Log colorator for SublimeText allowing easy reviewing of android and ios logs
+Log colorator for SublimeText allowing easy reviewing of Android and iOS logs
 
 ## Installation
 1. Download the repo as a zip
@@ -12,7 +12,8 @@ Log colorator for SublimeText allowing easy reviewing of android and ios logs
 6. And voila !
 
 ## Content
- - A theme dedicated for Log reading. The coloration is most likely to be compatible with your prefered theme as well, and is of couse compatible with Monokaï.
+ - A theme dedicated for Log reading. (Also compatible with Monokaï, 
+   and very likely also compatible with your prefered theme)
  - Coloration for iOS ans Android logs depending on the log level
  - Inclusive and exclusive filtering
 
@@ -23,7 +24,8 @@ Else, you can trigger the coloration by setting the syntax to either alog or ilo
 
 To do that you have multiple solution :
  - On the lower right corner, select LogReader/Android Logs / iOS Logs
- - "ctrl+shift+P" then "set syntax Android Logs" / "iOS Logs" (a quick way to do this is to type "ctrl+shift+P" "alog" Enter)
+ - "ctrl+shift+P" then "set syntax Android Logs" / "iOS Logs"
+   A quick way to do this is to type "ctrl+shift+P" "alog" Enter
 
 ### Filtering
 You can filter the logs to either : 
