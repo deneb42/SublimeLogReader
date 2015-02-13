@@ -4,6 +4,23 @@ class LogFilterCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		v = self.view
 		s = v.sel()
+		r = v.find_all(v.substr(s[0]), sublime.LITERAL)
+		s.add_all(r)
+
+		for reg in s:
+			if not reg.empty():
+				s.add(v.full_line(reg))
+
+		i = len(s) - 1
+		while i >= 0:
+			v.erase(edit, s[i])
+			i = i - 1
+		s.clear()
+
+class LogMultiFilterCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		v = self.view
+		s = v.sel()
 		r = sublime.Selection(66)
 
 		for reg in s:

@@ -18,7 +18,7 @@
 					<key>name</key>
 					<string>markup.italic</string>
 				</dict>
-				<key>3</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.emp</string>
@@ -27,7 +27,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>(^((.*V/(Spark2|MSDK)\s*\(\s*\d+\):)|.*V/.*\s*\(\s*\d+\):))(.*$)</string>
+			<string>(^V.*\(.*\):)(.*$)</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -39,7 +39,7 @@
 					<key>name</key>
 					<string>markup.italic</string>
 				</dict>
-				<key>3</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.emp</string>
@@ -48,7 +48,7 @@
 			<key>comment</key>
 			<string>Debug</string>
 			<key>match</key>
-			<string>(^((.*D/(Spark2|MSDK)\s*\(\s*\d+\):)|.*D/.*\s*\(\s*\d+\):))(.*$)</string>
+			<string>(^D.*\(.*\):)(.*$)</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
@@ -60,7 +60,7 @@
 					<key>name</key>
 					<string>markup.italic</string>
 				</dict>
-				<key>3</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.emp</string>
@@ -69,7 +69,7 @@
 			<key>comment</key>
 			<string>Informations</string>
 			<key>match</key>
-			<string>(^((.*I/(Spark2|MSDK)\s*\(\s*\d+\):)|.*I/.*\s*\(\s*\d+\):))(.*$)</string>
+			<string>(^I.*\(.*\):)(.*$)</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -81,7 +81,7 @@
 					<key>name</key>
 					<string>markup.italic</string>
 				</dict>
-				<key>3</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.emp</string>
@@ -90,7 +90,7 @@
 			<key>comment</key>
 			<string>Warnings</string>
 			<key>match</key>
-			<string>(^((.*W/(Spark2|MSDK)\s*\(\s*\d+\):)|.*W/.*\s*\(\s*\d+\):))(.*$)</string>
+			<string>(^W.*\(.*\):)(.*$)</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -102,7 +102,7 @@
 					<key>name</key>
 					<string>markup.italic</string>
 				</dict>
-				<key>3</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.emp</string>
@@ -111,7 +111,7 @@
 			<key>comment</key>
 			<string>Errors</string>
 			<key>match</key>
-			<string>(^((.*E/(Spark2|MSDK)\s*\(\s*\d+\):)|.*E/.*\s*\(\s*\d+\):))(.*$)</string>
+			<string>(^E.*\(.*\):)(.*$)</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -123,7 +123,7 @@
 					<key>name</key>
 					<string>markup.italic</string>
 				</dict>
-				<key>3</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>markup.emp</string>
@@ -132,7 +132,7 @@
 			<key>comment</key>
 			<string>Asserts</string>
 			<key>match</key>
-			<string>(^((.*A/(Spark2|MSDK)\s*\(\s*\d+\):)|.*A/.*\s*\(\s*\d+\):))(.*$)</string>
+			<string>(^A.*\(.*\):)(.*$)</string>
 			<key>name</key>
 			<string>invalid</string>
 		</dict>
