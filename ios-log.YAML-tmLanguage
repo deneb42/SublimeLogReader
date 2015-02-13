@@ -1,0 +1,50 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: iOS log
+scopeName: source.ilog
+fileTypes: [ilog]
+uuid: 626215ee-ffd7-4cce-af50-e4e4dc43d58b
+
+patterns:
+- comment: Verbose
+  name: comment
+  match: '(^.*<>:)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+# - comment: Debug
+#   name: constant.numeric
+#   match: '(^D.*\(.*\):)(.*$)'
+#   captures:
+#     '1': {name: markup.italic}
+#     '2': {name: markup.bold}
+
+- comment: Notice
+  name: entity
+  match: '(^.*<Notice>:)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+- comment: Warnings
+  name: string
+  match: '(^.*<Warning>:)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+- comment: Errors
+  name: keyword
+  match: '(^.*<Error>:)(.*$)'
+  captures:
+    '1': {name: markup.italic}
+    '2': {name: markup.bold}
+
+# - comment: Asserts
+#   name: invalid
+#   match: '(^A.*\(.*\):)(.*$)'
+#   captures:
+#     '1': {name: markup.italic}
+#     '2': {name: markup.bold}
+# ...

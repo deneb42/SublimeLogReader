@@ -1,0 +1,119 @@
+# [PackageDev] target_format: plist, ext: tmTheme
+---
+name: Log-I-Theme
+uuid: 04251878-d395-4f3e-9df8-cf94c8fea645
+
+settings:
+- settings:
+    background : '#131313'
+    caret : '#00bbff'
+    foreground : '#aaaaaa'
+    invisibles : '#1f1f1f'
+    lineHighlight : '#191919'
+    selection : '#3d1700'
+    selectionBorder : '#553420'
+    inactiveSelection : '#4a2c1a'
+    findHighlight : '#00186d'
+    findHighlightForeground : '#ffffff'
+    shadow : '#7f7f7f'
+    shadowWidth : '6'
+
+- name: Default Comment
+  scope: 'comment'
+  settings:
+    fontStyle: ''
+    foreground: '#919191'
+    background: ''
+
+- name: Default Constant
+  scope: 'constant'
+  settings:
+    fontStyle: ''
+    foreground: '#2299ff'
+    background: ''
+
+- name: Default Entity
+  scope: 'entity'
+  settings:
+    fontStyle: ''
+    foreground: '#22cc55'
+    background: ''
+
+- name: Default Invalid
+  scope: 'invalid'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#ff0000'
+
+- name: Default Keyword
+  scope: 'keyword'
+  settings:
+    fontStyle: ''
+    foreground: '#ff1111'
+    background: ''
+
+- name: Default Markup
+  scope: 'markup.raw'
+  settings:
+    fontStyle: ''
+    foreground: '#ff0000'
+    background: ''
+
+- name: Italic Markup
+  scope: 'markup.italic'
+  settings:
+    fontStyle: 'italic'
+    foreground: ''
+    background: ''
+
+- name: Bold Markup
+  scope: 'markup.bold'
+  settings:
+    fontStyle: 'bold'
+    foreground: ''
+    background: ''
+
+- name: Emphasised Markup
+  scope: 'markup.emp'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#282828'
+
+- name: Default Meta
+  scope: 'meta'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#ff0000'
+
+- name: Default Storage
+  scope: 'storage'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#00ff00'
+
+- name: Default String
+  scope: 'string'
+  settings:
+    fontStyle: ''
+    foreground: '#ffcc00'
+    background: ''
+
+- name: Default Support
+  scope: 'support'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#ffff00'
+
+- name: Default Variable
+  scope: 'variable'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#ff00ff'
+
+...

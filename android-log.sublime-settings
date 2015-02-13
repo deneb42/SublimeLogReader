@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		"alog"
+	],
+
+	"color_scheme": "Packages/LogReader/log.tmTheme"
+}

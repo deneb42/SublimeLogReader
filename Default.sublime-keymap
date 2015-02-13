@@ -1,0 +1,4 @@
+[
+	{ "keys": ["ctrl+shift+x"], "command": "log_filter" },
+	{ "keys": ["ctrl+shift+c"], "command": "log_keep" }
+]

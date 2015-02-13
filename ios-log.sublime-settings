@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		"ilog"
+	],
+
+	"color_scheme": "Packages/LogReader/log.tmTheme"
+}
