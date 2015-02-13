@@ -1,36 +1,17 @@
 import sublime, sublime_plugin
 
+
 class LogFilterCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		v = self.view
-		s = v.sel()
-		r = v.find_all(v.substr(s[0]), sublime.LITERAL)
-		s.add_all(r)
+		v = self.view ## toto
+		s = v.sel()## toto
+		r = []	## toto
 
 		for reg in s:
-			if not reg.empty():
-				s.add(v.full_line(reg))
+			r.extend(v.find_all(v.substr(reg), sublime.LITERAL))
 
-		i = len(s) - 1
-		while i >= 0:
-			v.erase(edit, s[i])
-			i = i - 1
-		s.clear()
-
-class LogMultiFilterCommand(sublime_plugin.TextCommand):
-	def run(self, edit):
-		v = self.view
-		s = v.sel()
-		r = sublime.Selection(66)
-
-		for reg in s:
-			r.add_all(v.find_all(v.substr(reg), sublime.LITERAL))
-
-		s.add_all(r)
-
-		for reg in s:
-			if not reg.empty():
-				s.add(v.full_line(reg))
+		for reg in r:
+			s.add(v.full_line(reg))
 
 		i = len(s) - 1
 		while i >= 0:
@@ -42,21 +23,28 @@ class LogKeepCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		v = self.view
 		s = v.sel()
-		r = sublime.Selection(33)
+		r = []
 
 		for reg in s:
-			r.add_all(v.find_all(v.substr(reg), sublime.LITERAL))
+			r.extend(v.find_all(v.substr(reg), sublime.LITERAL))
+		for i in range(len(r)):
+			r[i] = v.full_line(r[i])
 
-		s.add_all(r)
-		toRemove = sublime.Selection(806)
-		toRemove.add(sublime.Region(0, v.size()-1))
+		i = 0
+		while i < len(r) - 1:
+			if r[i].end() == r[i+1].begin():
+				r[i] = sublime.Region(r[i].begin(), r[i+1].end())
+				del r[i+1]
+			else:
+				i = i + 1
 
-		for reg in s:
-			if not reg.empty():
-				toRemove.subtract(v.full_line(reg))
 
-		i = len(toRemove) - 1
+		s.add(sublime.Region(0, v.size()-1))
+		for reg in r:
+			s.subtract(reg)
+
+		i = len(s) - 1
 		while i >= 0:
-			v.erase(edit, toRemove[i])
+			v.erase(edit, s[i])
 			i = i - 1
 		s.clear()
