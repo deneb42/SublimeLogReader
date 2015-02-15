@@ -4,5 +4,5 @@
 		"alog"
 	],
 
-	"color_scheme": "Packages/LogReader/log.tmTheme"
+	"color_scheme": "Packages/MobileLogReader/log.tmTheme"
 }

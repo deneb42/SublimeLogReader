@@ -6,12 +6,13 @@ Log coloration for SublimeText allowing easy reviewing of Android and iOS logs
 ## Installation
 ### Using Package Control
 You need to have Package Control installed in Sublime Text (installation instructions [here])
-"ctrl+shift+P" => "Package Control: Install Package" => LogReader
+"ctrl+shift+P" => "Package Control: Install Package" => MobileLogReader
+
 ### Manually
 1. Download the repository as a zip
 2. Inside SublimeText, go to Preferences/Browse Package...
 4. Extract the zip here
-5. Rename the created folder to "LogReader"
+5. Rename the created folder to "MobileLogReader"
 6. And voila !
 
 ## Content
@@ -25,7 +26,7 @@ The plugin will automatically color .alog (for Android) and .ilog (iOS) files.
 Else, you can trigger the coloration by setting the syntax to either alog or ilog. 
 
 To do that you have multiple solution :
- - On the lower right corner, select LogReader/Android Logs / iOS Logs
+ - On the lower right corner, select MobileLogReader/Android Logs / iOS Logs
  - "ctrl+shift+P" then "set syntax Android Logs" / "iOS Logs"  
    A quick way to do this is to type "ctrl+shift+P" "alog" Enter
 

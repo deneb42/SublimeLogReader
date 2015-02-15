@@ -5,8 +5,8 @@
         "children":
         [
             {
-                "caption": "Log Reader",
-                "id": "log-reader",
+                "caption": "Mobile Log Reader",
+                "id": "mobile-log-reader",
                 "children":
                 [
                     {
@@ -35,8 +35,8 @@
                 "children":
                 [
                     {
-                        "caption": "Log Reader",
-                        "id": "log-reader",
+                        "caption": "Mobile Log Reader",
+                        "id": "mobile-log-reader",
                         "children":
                         [
                             {
@@ -44,7 +44,7 @@
                                 "id": "key-bindings-default",
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/LogReader/Default.sublime-keymap"
+                                    "file": "${packages}/MobileLogReader/Default.sublime-keymap"
                                 }
                             }/*,
                             {
@@ -52,7 +52,7 @@
                                 "id": "key-bindings-user",
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/User/LogReader.sublime-keymap"
+                                    "file": "${packages}/User/MobileLogReader.sublime-keymap"
                                 }
                             }*/
                         ]
