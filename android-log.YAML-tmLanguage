@@ -11,39 +11,33 @@ patterns:
   match: '(^.*V.*\(.*\):)(.*$)'
   captures:
     '1': {name: markup.italic}
-    '2': {name: markup.emp}
 - comment: Debug
   name: constant.numeric
   match: '(^.*D.*\(.*\):)(.*$)'
   captures:
     '1': {name: markup.italic}
-    '2': {name: markup.emp}
 
 - comment: Informations
   name: entity
   match: '(^.*I.*\(.*\):)(.*$)'
   captures:
     '1': {name: markup.italic}
-    '2': {name: markup.emp}
 
 - comment: Warnings
   name: string
   match: '(^.*W.*\(.*\):)(.*$)'
   captures:
     '1': {name: markup.italic}
-    '2': {name: markup.emp}
 
 - comment: Errors
   name: keyword
   match: '(^.*E.*\(.*\):)(.*$)'
   captures:
     '1': {name: markup.italic}
-    '2': {name: markup.emp}
 
 - comment: Asserts
   name: invalid
   match: '(^.*A.*\(.*\):)(.*$)'
   captures:
     '1': {name: markup.italic}
-    '2': {name: markup.emp}
 ...
