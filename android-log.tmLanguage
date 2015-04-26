@@ -22,7 +22,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>(^.*V.*\(.*\):)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+)?V/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -38,7 +38,7 @@
 			<key>comment</key>
 			<string>Debug</string>
 			<key>match</key>
-			<string>(^.*D.*\(.*\):)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+)?D/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
@@ -52,9 +52,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Informations</string>
+			<string>Info</string>
 			<key>match</key>
-			<string>(^.*I.*\(.*\):)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+)?I/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -68,9 +68,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Warnings</string>
+			<string>Warning</string>
 			<key>match</key>
-			<string>(^.*W.*\(.*\):)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+)?W/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -84,9 +84,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Errors</string>
+			<string>Error</string>
 			<key>match</key>
-			<string>(^.*E.*\(.*\):)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+)?E/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -100,11 +100,337 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Asserts</string>
+			<string>Assert</string>
 			<key>match</key>
-			<string>(^.*A.*\(.*\):)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+)?A/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)</string>
 			<key>name</key>
 			<string>invalid</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Verbose</string>
+			<key>match</key>
+			<string>^(V\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Debug</string>
+			<key>match</key>
+			<string>^(D\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$</string>
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Info</string>
+			<key>match</key>
+			<string>^(I\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$</string>
+			<key>name</key>
+			<string>entity</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Warning</string>
+			<key>match</key>
+			<string>^(W\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$</string>
+			<key>name</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Error</string>
+			<key>match</key>
+			<string>^(E\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Assert</string>
+			<key>match</key>
+			<string>^(A\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$</string>
+			<key>name</key>
+			<string>invalid</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Verbose</string>
+			<key>match</key>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+\s+\d+ V [a-zA-z0-9\-_ +.]*:)(.*$)</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Debug</string>
+			<key>match</key>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+\s+\d+ D [a-zA-z0-9\-_ +.]*:)(.*$)</string>
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Info</string>
+			<key>match</key>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+\s+\d+ I [a-zA-z0-9\-_ +.]*:)(.*$)</string>
+			<key>name</key>
+			<string>entity</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Warning</string>
+			<key>match</key>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+\s+\d+ W [a-zA-z0-9\-_ +.]*:)(.*$)</string>
+			<key>name</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Error</string>
+			<key>match</key>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+\s+\d+ E [a-zA-z0-9\-_ +.]*:)(.*$)</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Assert</string>
+			<key>match</key>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+\s+\d+ A [a-zA-z0-9\-_ +.]*:)(.*$)</string>
+			<key>name</key>
+			<string>invalid</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Verbose</string>
+			<key>match</key>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+:\s+\d+ V/[a-zA-z0-9\-_ +.]* \])</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Debug</string>
+			<key>match</key>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+:\s+\d+ D/[a-zA-z0-9\-_ +.]* \])</string>
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Info</string>
+			<key>match</key>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+:\s+\d+ I/[a-zA-z0-9\-_ +.]* \])</string>
+			<key>name</key>
+			<string>entity</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Warning</string>
+			<key>match</key>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+:\s+\d+ W/[a-zA-z0-9\-_ +.]* \])</string>
+			<key>name</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Error</string>
+			<key>match</key>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+:\s+\d+ E/[a-zA-z0-9\-_ +.]* \])</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Assert</string>
+			<key>match</key>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s+\d+:\s+\d+ A/[a-zA-z0-9\-_ +.]* \])</string>
+			<key>name</key>
+			<string>invalid</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Default</string>
+			<key>match</key>
+			<string>^.*$</string>
+			<key>name</key>
+			<string>variable</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
