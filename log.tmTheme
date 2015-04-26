@@ -238,7 +238,22 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#ff00ff</string>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable parameter</string>
+			<key>scope</key>
+			<string>variable.parameter</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#ff6600</string>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>

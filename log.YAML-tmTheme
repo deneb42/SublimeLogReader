@@ -113,7 +113,13 @@ settings:
   scope: 'variable'
   settings:
     fontStyle: ''
-    foreground: ''
-    background: '#ff00ff'
+    foreground: '#ffffff'
+    background: ''
 
+- name: Variable parameter
+  scope: 'variable.parameter'
+  settings:
+    fontStyle: ''
+    foreground: ''
+    background: '#ff6600'
 ...
