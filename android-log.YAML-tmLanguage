@@ -11,37 +11,37 @@ patterns:
 # ------------------------------------------------------------------------------
 - comment: Verbose
   name: comment
-  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?V/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)'
+  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?V/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Debug
   name: constant.numeric
-  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?D/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)'
+  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?D/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Info
   name: entity
-  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?I/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)'
+  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?I/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Warning
   name: string
-  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?W/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)'
+  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?W/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Error
   name: keyword
-  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?E/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)'
+  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?E/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Assert
   name: invalid
-  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?A/[a-zA-z0-9\-_ +.]*(\(\s*\d+\))?:)(.*$)'
+  match: '^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?A/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
@@ -51,42 +51,42 @@ patterns:
 # ------------------------------------------------------------------------------
 - comment: Verbose
   name: comment
-  match: '^(V\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$'
+  match: '^(V\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$'
   captures:
     '1': {name: markup.italic}
     '2': {name: markup.italic}
 
 - comment: Debug
   name: constant.numeric
-  match: '^(D\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$'
+  match: '^(D\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$'
   captures:
     '1': {name: markup.italic}
     '2': {name: markup.italic}
 
 - comment: Info
   name: entity
-  match: '^(I\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$'
+  match: '^(I\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$'
   captures:
     '1': {name: markup.italic}
     '2': {name: markup.italic}
 
 - comment: Warning
   name: string
-  match: '^(W\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$'
+  match: '^(W\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$'
   captures:
     '1': {name: markup.italic}
     '2': {name: markup.italic}
 
 - comment: Error
   name: keyword
-  match: '^(E\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$'
+  match: '^(E\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$'
   captures:
     '1': {name: markup.italic}
     '2': {name: markup.italic}
 
 - comment: Assert
   name: invalid
-  match: '^(A\(\s*\d+\)).*(\([a-zA-z0-9\-_ +.]*\))$'
+  match: '^(A\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$'
   captures:
     '1': {name: markup.italic}
     '2': {name: markup.italic}
@@ -97,37 +97,37 @@ patterns:
 # ------------------------------------------------------------------------------
 - comment: Verbose
   name: comment
-  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ V [a-zA-z0-9\-_ +.]*:)(.*$)'
+  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ V [a-zA-z0-9\-_ +./\\;:]*:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Debug
   name: constant.numeric
-  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ D [a-zA-z0-9\-_ +.]*:)(.*$)'
+  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ D [a-zA-z0-9\-_ +./\\;:]*:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Info
   name: entity
-  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ I [a-zA-z0-9\-_ +.]*:)(.*$)'
+  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ I [a-zA-z0-9\-_ +./\\;:]*:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Warning
   name: string
-  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ W [a-zA-z0-9\-_ +.]*:)(.*$)'
+  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ W [a-zA-z0-9\-_ +./\\;:]*:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Error
   name: keyword
-  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ E [a-zA-z0-9\-_ +.]*:)(.*$)'
+  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ E [a-zA-z0-9\-_ +./\\;:]*:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
 - comment: Assert
   name: invalid
-  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ A [a-zA-z0-9\-_ +.]*:)(.*$)'
+  match: '^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ A [a-zA-z0-9\-_ +./\\;:]*:)(.*$)'
   captures:
     '1': {name: markup.italic}
 
@@ -137,37 +137,37 @@ patterns:
 # ------------------------------------------------------------------------------
 - comment: Verbose
   name: comment
-  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ V/[a-zA-z0-9\-_ +.]* \])'
+  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ V/[a-zA-z0-9\-_ +./\\;:]* \])'
   captures:
     '1': {name: markup.italic}
 
 - comment: Debug
   name: constant.numeric
-  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ D/[a-zA-z0-9\-_ +.]* \])'
+  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ D/[a-zA-z0-9\-_ +./\\;:]* \])'
   captures:
     '1': {name: markup.italic}
 
 - comment: Info
   name: entity
-  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ I/[a-zA-z0-9\-_ +.]* \])'
+  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ I/[a-zA-z0-9\-_ +./\\;:]* \])'
   captures:
     '1': {name: markup.italic}
 
 - comment: Warning
   name: string
-  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ W/[a-zA-z0-9\-_ +.]* \])'
+  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ W/[a-zA-z0-9\-_ +./\\;:]* \])'
   captures:
     '1': {name: markup.italic}
 
 - comment: Error
   name: keyword
-  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ E/[a-zA-z0-9\-_ +.]* \])'
+  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ E/[a-zA-z0-9\-_ +./\\;:]* \])'
   captures:
     '1': {name: markup.italic}
 
 - comment: Assert
   name: invalid
-  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ A/[a-zA-z0-9\-_ +.]* \])'
+  match: '^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ A/[a-zA-z0-9\-_ +./\\;:]* \])'
   captures:
     '1': {name: markup.italic}
 
