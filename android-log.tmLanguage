@@ -22,7 +22,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?V/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?V/[^(]*(\(\s*\d+\))?:).*$</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -38,7 +38,7 @@
 			<key>comment</key>
 			<string>Debug</string>
 			<key>match</key>
-			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?D/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?D/[^(]*(\(\s*\d+\))?:).*$</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
@@ -54,7 +54,7 @@
 			<key>comment</key>
 			<string>Info</string>
 			<key>match</key>
-			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?I/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?I/[^(]*(\(\s*\d+\))?:).*$</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -70,7 +70,7 @@
 			<key>comment</key>
 			<string>Warning</string>
 			<key>match</key>
-			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?W/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?W/[^(]*(\(\s*\d+\))?:).*$</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -86,7 +86,7 @@
 			<key>comment</key>
 			<string>Error</string>
 			<key>match</key>
-			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?E/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?E/[^(]*(\(\s*\d+\))?:).*$</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -102,7 +102,7 @@
 			<key>comment</key>
 			<string>Assert</string>
 			<key>match</key>
-			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?A/[a-zA-z0-9\-_ +./\\;:]*(\(\s*\d+\))?:)(.*$)</string>
+			<string>^((\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+)?A/[^(]*(\(\s*\d+\))?:).*$</string>
 			<key>name</key>
 			<string>invalid</string>
 		</dict>
@@ -123,7 +123,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>^(V\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$</string>
+			<string>^(V\(\s*\d+\)).*(\([^)]*\))$</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -144,7 +144,7 @@
 			<key>comment</key>
 			<string>Debug</string>
 			<key>match</key>
-			<string>^(D\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$</string>
+			<string>^(D\(\s*\d+\)).*(\([^)]*\))$</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
@@ -165,7 +165,7 @@
 			<key>comment</key>
 			<string>Info</string>
 			<key>match</key>
-			<string>^(I\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$</string>
+			<string>^(I\(\s*\d+\)).*(\([^)]*\))$</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -186,7 +186,7 @@
 			<key>comment</key>
 			<string>Warning</string>
 			<key>match</key>
-			<string>^(W\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$</string>
+			<string>^(W\(\s*\d+\)).*(\([^)]*\))$</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -207,7 +207,7 @@
 			<key>comment</key>
 			<string>Error</string>
 			<key>match</key>
-			<string>^(E\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$</string>
+			<string>^(E\(\s*\d+\)).*(\([^)]*\))$</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -228,7 +228,7 @@
 			<key>comment</key>
 			<string>Assert</string>
 			<key>match</key>
-			<string>^(A\(\s*\d+\)).*(\([a-zA-z0-9\-_ +./\\;:]*\))$</string>
+			<string>^(A\(\s*\d+\)).*(\([^)]*\))$</string>
 			<key>name</key>
 			<string>invalid</string>
 		</dict>
@@ -244,7 +244,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ V [a-zA-z0-9\-_ +./\\;:]*:)(.*$)</string>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ V [^:]*:).*$</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -260,7 +260,7 @@
 			<key>comment</key>
 			<string>Debug</string>
 			<key>match</key>
-			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ D [a-zA-z0-9\-_ +./\\;:]*:)(.*$)</string>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ D [^:]*:).*$</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
@@ -276,7 +276,7 @@
 			<key>comment</key>
 			<string>Info</string>
 			<key>match</key>
-			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ I [a-zA-z0-9\-_ +./\\;:]*:)(.*$)</string>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ I [^:]*:).*$</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -292,7 +292,7 @@
 			<key>comment</key>
 			<string>Warning</string>
 			<key>match</key>
-			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ W [a-zA-z0-9\-_ +./\\;:]*:)(.*$)</string>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ W [^:]*:).*$</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -308,7 +308,7 @@
 			<key>comment</key>
 			<string>Error</string>
 			<key>match</key>
-			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ E [a-zA-z0-9\-_ +./\\;:]*:)(.*$)</string>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ E [^:]*:).*$</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -324,7 +324,7 @@
 			<key>comment</key>
 			<string>Assert</string>
 			<key>match</key>
-			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ A [a-zA-z0-9\-_ +./\\;:]*:)(.*$)</string>
+			<string>^(\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+\s+\d+ A [^:]*:).*$</string>
 			<key>name</key>
 			<string>invalid</string>
 		</dict>
@@ -340,7 +340,7 @@
 			<key>comment</key>
 			<string>Verbose</string>
 			<key>match</key>
-			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ V/[a-zA-z0-9\-_ +./\\;:]* \])</string>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ V/.* \])$</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
@@ -356,7 +356,7 @@
 			<key>comment</key>
 			<string>Debug</string>
 			<key>match</key>
-			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ D/[a-zA-z0-9\-_ +./\\;:]* \])</string>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ D/.* \])$</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
@@ -372,7 +372,7 @@
 			<key>comment</key>
 			<string>Info</string>
 			<key>match</key>
-			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ I/[a-zA-z0-9\-_ +./\\;:]* \])</string>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ I/.* \])$</string>
 			<key>name</key>
 			<string>entity</string>
 		</dict>
@@ -388,7 +388,7 @@
 			<key>comment</key>
 			<string>Warning</string>
 			<key>match</key>
-			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ W/[a-zA-z0-9\-_ +./\\;:]* \])</string>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ W/.* \])$</string>
 			<key>name</key>
 			<string>string</string>
 		</dict>
@@ -404,7 +404,7 @@
 			<key>comment</key>
 			<string>Error</string>
 			<key>match</key>
-			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ E/[a-zA-z0-9\-_ +./\\;:]* \])</string>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ E/.* \])$</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -420,7 +420,7 @@
 			<key>comment</key>
 			<string>Assert</string>
 			<key>match</key>
-			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ A/[a-zA-z0-9\-_ +./\\;:]* \])</string>
+			<string>^(\[ \d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:?\s+\d+:\s+\d+ A/.* \])$</string>
 			<key>name</key>
 			<string>invalid</string>
 		</dict>
